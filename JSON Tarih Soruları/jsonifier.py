@@ -1,30 +1,6 @@
 import json
 import io
 
-x = {
-    "questions":[
-        {
-            "question":"Aşağıdakilerden hangisi duraklama döneminde İran'la yapılan antlaşmalardan biri değildir?",
-            "A":"Nasuh Paşa",
-            "B":"Kasr-ı Şirin",
-            "C":"Bucaş",
-            "D":"Serav",
-            "E":"Ferhad Paşa",
-            "answer":"C"
-        },
-        {
-            "question":"Aşağıdakilerden hangisi duraklama döneminde İran'la yapılan antlaşmalardan biri değildir?",
-            "A":"Nasuh Paşa",
-            "B":"Kasr-ı Şirin",
-            "C":"Bucaş",
-            "D":"Serav",
-            "E":"Ferhad Paşa",
-            "answer":"C"
-        }
-    ]
-}
-x["questions"].append({"eben":1})
-
 obj = {"questions":[]}
 with io.open("sorular_raw.txt", "r", encoding='utf8') as question_file:
     temp = {}
