@@ -1,0 +1,49 @@
+{
+    "questions": [
+        {
+            "answer": "A",
+            "question": "''Bağdat Fatihi'' ünvanı ile bilinen IV. Murat'ın Safeviler ile imzaladığı ve bugünkü Türkiye İran sınırını büyük ölçüde belirleyen antlaşma aşağıdakilerden hangisidir?\n",
+            "A": "Kasr-ı Şirin",
+            "B": "Amasya",
+            "C": "Nasuh Paşa",
+            "D": "Serav",
+            "E": "Ferhat Paşa"
+        },
+        {
+            "question": "Aşağıdakilerden hangisi duraklama döneminde İran'la yapılan antlaşmalardan biri değildir?\n",
+            "A": "Nasuh Paşa",
+            "B": "Kasr-ı Şirin",
+            "answer": "C",
+            "C": "Bucaş",
+            "D": "Serav",
+            "E": "Ferhad Paşa"
+        },
+        {
+            "question": "Avusturya ile 1606 yılına kadar süren savaşlar sonunda Avusturya'nın isteği ile Zitvatorok Antlaşması imzalandı. Bu antlaşmaya göre:\n- Eğri, Kanije ve Estergon Kaleleri Osmanlı Devleti'ne bırakılacaktı.\n-Avusturya, Osmanlı Devleti'ne savaş tazminatı ödeyecekti.\n- Avusturya arşidükü  Osmanlı padişahına eşit sayılacaktı.\nAntlaşmanın bu maddelerine bakılarak aşağıdakilerden hangisi söylenebilir?\n",
+            "A": "Osmanlı Devleti Balkanlar'da toprak kaybetmiştir.",
+            "B": "Taraflar arasında bir daha savaş olmamıştır.",
+            "answer": "C",
+            "C": "Antlaşma ile Osmanlı Devleti'nin Avusturya üstündeki siyasi üstünlüğü sona ermiştir.",
+            "D": "İki devlet birlikte hareket etme kararı almıştır.",
+            "E": "Osmanlı Devleti'nde taht kavgaları sona ermiştir."
+        },
+        {
+            "question": "Aşağıdakilerden hangisi Karlofça Antlaşması sonrası Osmanlı Devleti’nde görülen değişimlerden biri değildir?\n",
+            "A": "Avrupa’yı tanıma ve onların tecrübelerinden yararlanma düşüncesi önem kazandı.",
+            "B": "Kötüye giden işlerin klasik düzeni tesis etmekle düzeltilmeye çalışılması düşüncesi yıkıldı.",
+            "C": "Devlet idaresinde askerî unsurlar yerine bürokratik unsurlar daha fazla ön plana çıkarıldı.",
+            "D": "Dış politika yeniden şekillendirilmeye, konjonktürel ittifaklar kurulmaya çalışıldı.",
+            "answer": "E",
+            "E": "Osmanlı-Fransız ilişkileri gelişmeye, Fransa Osmanlı nezdinde giderek itibar kazanmaya başladı."
+        },
+        {
+            "question": "Zitvatorok Antlaşması'na göre Avusturya arşidükü protokolde Osmanlı padişahına denk sayılacaktır. Bu durumla ilgili aşağıdakilerden hangisi söylenebilir?\n",
+            "A": "Avusturya'nın yeni kurulmuş bir devlet olduğu",
+            "B": "Avusturya'nın Osmanlı'dan daha kalabalık bir nüfusu olduğu",
+            "C": "Avusturya'nın Osmanlı ile siyasi ilişkilerini kesmek istediği",
+            "answer": "D",
+            "D": "Osmanlı'nın siyasi üstünlüğünü kaybettiği",
+            "E": "Osmanlıların Avrupa'nın baskısı altında kaldığı"
+        }
+    ]
+}
