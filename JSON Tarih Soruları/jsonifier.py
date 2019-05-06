@@ -28,6 +28,5 @@ with io.open("sorular_raw.txt", "r", encoding='utf8') as question_file:
         elif line!="":
             question+=line+"\n"
 
-
 with io.open("sorular.json", 'w', encoding='utf8') as json_file:
     json.dump(obj, json_file, ensure_ascii=False)
