@@ -1,20 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Game : MonoBehaviour {
 	private Question[] questions;
 	private int currentQuestionNumber;
+	private int correctAnswers;
 
 	public Text questionText;
 	public Text buttonA;
 	public Text buttonB;
 	public Text buttonC;
-	
-	// Use this for initialization
+	public Text pointsText;
+
+	public GameObject gameOverPanel;
+
 	void Start () {
+		correctAnswers = 0; 
+		currentQuestionNumber = 0;
 		ReadQuestions();
 		// 5 choices don't leave enough room for long answers
 		// so reduce the number of answers to 3
@@ -22,10 +25,6 @@ public class Game : MonoBehaviour {
 		ChangeTo3Choices(questions);
 		RandomizeOrder(questions);
 		DisplayNextQuestion();
-	}
-	
-	void Update(){
-
 	}
 
 	// Reads json file and initializes questions array
@@ -100,13 +99,26 @@ public class Game : MonoBehaviour {
 	}
 
 	private void CorrectAnswer(){
-		Debug.Log("correct nigga");
+		Debug.Log("correct");
+		correctAnswers++;
+		pointsText.text = correctAnswers.ToString();
+
 		currentQuestionNumber++;
 		DisplayNextQuestion();
 	}
 
 	private void WrongAnswer(){
-		Debug.Log("wrong nigga");
+		Debug.Log("wrong");
+		GameOver();
+	}
+
+	public void TimesUp(){
+		Debug.Log("annen");
+		GameOver();
+	}
+
+	public void GameOver(){
+		
 	}
 
 	public void ButtonA_Click(){
