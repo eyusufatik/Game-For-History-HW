@@ -1,5 +1,5 @@
 {
-    "questions": [
+    "Items": [
         {
             "answer": "A",
             "question": "''Bağdat Fatihi'' ünvanı ile bilinen IV. Murat'ın Safeviler ile imzaladığı ve bugünkü Türkiye İran sınırını büyük ölçüde belirleyen antlaşma aşağıdakilerden hangisidir?\n",
@@ -1280,7 +1280,8 @@
             "B": "Savaşların uzun sürmesi",
             "C": "Tımar sisteminin bozulması",
             "D": "Osmanlı parasının değer kaybetmesi",
-            "E": "Meşruti yönetime geçilmesi"
+            "E": "Meşruti yönetime geçilmesi",
+            "answer" : "E"
         },
         {
             "question": "Osmanlı Devleti’nde iç isyanların çıkmasında ekonominin bozulması etkilidir.\nAşağıdakilerden hangisi XVII. yüzyılda Osmanlı ekonomisinin bozulmasına sebep olan gelişmelerden biri değildir?\n",
@@ -1999,7 +2000,8 @@
             "B": "Askeriyedeki hoşnutsuzluklar",
             "C": "Volkan Gazetesi'nin yayınları",
             "D": "II. Abdulhamit'in meşrutiyeti istemediği düşüncesi",
-            "E": "II. Abdulhamit'in muhalif askerlere askerî müdahalede bulunması"
+            "E": "II. Abdulhamit'in muhalif askerlere askerî müdahalede bulunması",
+            "answer": "E"
         },
         {
             "question": "İttihat ve Terakki Cemiyeti, aşağıdaki gelişmelerden hangisi ile Osmanlı yönetimine tamamen hakim olmuştur?\n",
