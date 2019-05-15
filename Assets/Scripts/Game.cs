@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour {
 	private Question[] questions;
@@ -12,8 +13,12 @@ public class Game : MonoBehaviour {
 	public Text buttonB;
 	public Text buttonC;
 	public Text pointsText;
+	public Text GOpointsText;
+	public Text GOhighScoreText;
 
-	public GameObject gameOverPanel;
+	public GameObject mainGroup;
+	public GameObject gameOverGroup;
+	public GameObject scrollbar;
 
 	void Start () {
 		correctAnswers = 0; 
@@ -29,11 +34,19 @@ public class Game : MonoBehaviour {
 
 	// Reads json file and initializes questions array
 	private void ReadQuestions(){
-		string filePath = Path.Combine(Application.streamingAssetsPath, "sorular.json");
+		string filePath = Application.streamingAssetsPath + "/sorular.json";
 		string jsonData = "";
-		if(File.Exists(filePath)){
+		if (Application.platform == RuntimePlatform.Android)
+		{
+			WWW reader = new WWW(filePath);
+			while (!reader.isDone) { }
+			jsonData = reader.text;
+		}
+		else
+		{
 			jsonData = File.ReadAllText(filePath);
 		}
+		
 		questions = JsonHelper.FromJson<Question>(jsonData);
 	}
 
@@ -91,11 +104,14 @@ public class Game : MonoBehaviour {
 	}
 
 	private void DisplayNextQuestion(){
+		scrollbar.GetComponent<Scrollbar>().value = 1;
 		Question question = questions[currentQuestionNumber];
 		questionText.text = question.question;
 		buttonA.text = "A) " + question.A;
 		buttonB.text = "B) " + question.B;
 		buttonC.text = "C) " + question.C;
+
+		Debug.Log(question.answer);
 	}
 
 	private void CorrectAnswer(){
@@ -108,6 +124,16 @@ public class Game : MonoBehaviour {
 	}
 
 	private void WrongAnswer(){
+		Question question = questions[currentQuestionNumber];
+		if(question.answer.CompareTo("A")==0){
+			buttonA.GetComponentInParent<Image>().color = new Color32(0,255,31,255);
+		}
+		else if(question.answer.CompareTo("B")==0){
+			buttonB.GetComponentInParent<Image>().color = new Color32(0,255,31,255);
+		}
+		else if(question.answer.CompareTo("C")==0){
+			buttonC.GetComponentInParent<Image>().color = new Color32(0,255,31,255);
+		}
 		Debug.Log("wrong");
 		GameOver();
 	}
@@ -118,7 +144,11 @@ public class Game : MonoBehaviour {
 	}
 
 	public void GameOver(){
-		
+		GetComponent<HighScore>().CheckAndRecordHighScore(correctAnswers);
+		gameOverGroup.SetActive(true);
+		GOpointsText.text = "Doğru Sayısı:\n" + correctAnswers.ToString();
+		int highScore = GetComponent<HighScore>().GetHighScore();
+		GOhighScoreText.text = "Yüksek Skor:\n" + highScore.ToString();
 	}
 
 	public void ButtonA_Click(){
@@ -143,5 +173,9 @@ public class Game : MonoBehaviour {
 		}else{
 			WrongAnswer();
 		}
+	}
+
+	public void Replay_Click(){
+		SceneManager.LoadScene("GameScene");
 	}
 }
